@@ -1,27 +1,39 @@
-$(function(){
+$(function () {
+    // 漢堡按鈕
+    $('.hamburer').click(function () {
+        // 索引圖標切換
+        $(this).toggleClass('is-active');
+        $('.navigation').toggleClass('show');
+        
+    });
     // 滑動到指定位置
-    $('.menu a').click(function(){
+    $('.menu a').click(function () {
         var btn = $(this).attr('href');
         var pos = $(btn).offset();
-        $('html,body').animate({scrollTop:pos.top},1000);
+        $('html,body').animate({ scrollTop: pos.top }, 1000);
     });
 
-// 至頂按鈕
-$('#gotop').click(function(){
-    $('html,body').animate({scrollTop:0},1000);
-})
+    // 至頂按鈕
+    $('#gotop').click(function () {
+        $('html,body').animate({ scrollTop: 0 }, 1000);
+    })
 
-// 淡出淡入
-$(window).scroll(function(){
-    if($(this).scrollTop() > 200 ){
-        $('#gotop').stop().fadeTo('',1);}
-    else{
-        $('#gotop').stop().fadeOut();
+    // 淡出淡入
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('#gotop').stop().fadeTo('', 1);
+        }
+        else {
+            $('#gotop').stop().fadeOut();
+        }
+    })
+
+
+    if ($(window).width() < 821) {
+        $('#about video').remove();
     }
-})
-
 });
-$('.smoove').smoove({
-    offset: '30%',
 
+$('.smoove').smoove({
+    offset: '30%'
 });
