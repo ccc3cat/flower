@@ -473,8 +473,6 @@ section {
     background-image: url(images/pt_svc4.jpg);
 }
 
-@media (min-width:821px) {}
-
 /*平板*/
 @media (max-width:820px) {
     #service .list-box{
@@ -488,7 +486,14 @@ section {
 }
 
 /*手機板*/
-@media (max-width:640px) {}
+@media (max-width:640px) {
+    #service .list-box{
+        height: 70vh;
+    }
+    #service .item:nth-child(3){
+        display: flex;
+    }
+}
 
 /*宣傳影片*/
 #video {
@@ -580,6 +585,19 @@ section {
 #about p::-webkit-scrollbar-corner {
     /*單邊滾動條不會出現*/
     background-color: #444;
+}
+
+/*平板*/
+@media (max-width:820px) {
+    #about .container{
+        width: 85%;}
+}
+
+/*手機板*/
+@media (max-width:640px) {
+    #about .container{
+        width: 90%;
+        padding: 50px;}
 }
 
 #contact {
@@ -724,6 +742,17 @@ footer {
     background-color: var(--bg-color-1);
     height: 100px;
 }
+/*平板*/
+@media (max-width:820px) {
+    #form-contact{
+        width: 65%;
+
+    }
+}
+
+
+
+
 
 /*rwd斷點*/
 /*桌機板*/
