@@ -1,4 +1,11 @@
 $(function () {
+    // 漢堡按鈕
+    $('.hamburer').click(function () {
+        // 索引圖標切換
+        $(this).toggleClass('is-active');
+        $('.navigation').toggleClass('show');
+        
+    });
     // 滑動到指定位置
     $('.menu a').click(function () {
         var btn = $(this).attr('href');
@@ -20,7 +27,7 @@ $(function () {
             $('#gotop').stop().fadeOut();
         }
     })
-    
+
 
     if ($(window).width() < 821) {
         $('#about video').remove();
@@ -28,5 +35,5 @@ $(function () {
 });
 
 $('.smoove').smoove({
-    offset: '30%',
+    offset: '30%'
 });
