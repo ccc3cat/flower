@@ -20,11 +20,13 @@ $(function () {
             $('#gotop').stop().fadeOut();
         }
     })
-    $('.smoove').smoove({
-        offset: '30%',
-    });
+    
 
     if ($(window).width() < 821) {
         $('#about video').remove();
     }
+});
+
+$('.smoove').smoove({
+    offset: '30%',
 });
