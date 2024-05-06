@@ -407,9 +407,10 @@ section {
         align-items: center;
         animation:hide 1s both ;
     }
-    @keyframes navigation {
-        from {opacity: 1;}
-        to {opacity: 0;}
+
+    @keyframes hide {
+        from {opacity: 1; display: flex;}
+        to {opacity: 0; display: none;}
     }
 
     .navigation.show {
